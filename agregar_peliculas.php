@@ -20,11 +20,11 @@ header('Location:'.$url);
 	<div class="cuerpo">
 		<form action="inc/subir_peli.php" method="post" enctype="multipart/form-data">
 			<ul>
-				<li><input type="text" name="nombre"></li>
+				<li><input type="text" name="nombre"required></li>
 				<li><input type="file" name="imagefile"></li>
-				<li><input type="text" name="descripcion"></li>
-				<li><input type="numer"name="cantidad"></li>
-				<li><input type="text"name="genero"></li>
+				<li><input type="text" name="descripcion"required></li>
+				<li><input type="numer"name="cantidad"required></li>
+				<li><input type="text"name="genero"required></li>
 				<li><input type="submit" value="entrale"></li>
 			</ul>
 		</form>

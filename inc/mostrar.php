@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once('../conexion.php');
 $action=$_POST["action"];
 if($action=="showroom"){
@@ -11,7 +11,8 @@ if($action=="showroom"){
 		else
 			echo "<td><img class=\"imagenes\" src=\"".$url."images/no-image.png\"></td>";
 		echo "<td>".$row['nombre']."</td>";
-
+		echo "<td>".$row['descripcion']."</td>";
+		echo "<td>".$row['genero']."</td>";
 		echo "</tr>";
 	}
 }
