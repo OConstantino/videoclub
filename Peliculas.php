@@ -25,7 +25,12 @@ require_once('conexion.php');
 </body>
 <script type="text/javascript">
 	$(document).ready(function(){
-    showRoom();
-});
+		showRoom(0);
+	});
+	$(window).scroll(function() {
+		if($(window).scrollTop() + window.innerHeight == $(document).height()) {
+			showRoom(4);
+		}
+	});
 </script>
 </html>

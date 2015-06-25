@@ -1,5 +1,5 @@
 $(document).ready();
-
+var datai=0;
 var urlweb='http://localhost/VideoClub/';
 function ventana(argument) {
 	if(argument)
@@ -52,13 +52,14 @@ function ajax_register(user,passw,nombre,apellido) {
 			});
 	}
 }
-function showRoom(){
+function showRoom(data){
+	datai=datai+data;
 	$.ajax({
 		type:"POST",
 		url:urlweb+"/inc/mostrar.php",
-		data:{action:"showroom"},
-		success:function(data){
-			$("#tabla").html(data);
+		data:{action:datai},
+		success:function(d){
+			$("#tabla").append(d);
 		}
 	});
 }
