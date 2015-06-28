@@ -16,7 +16,15 @@ require_once('conexion.php');
 	<header class="encabezado"></header>
 	<?php include('/inc/menu.php'); ?>
 	<div class="cuerpo">
-		<table id="tabla" class="peliculas"></table>
+		<table id="tabla" class="peliculas">
+			<tr>
+				<td></td>
+				<td>Titulo</td>
+				<td>Director</td>
+				<td>Actores</td>
+				<td>Genero</td>
+			</tr>
+		</table>
 	</div>
 	<footer class="pie"></footer>
 	<?php if(!isset($_SESSION['iduser'])){
@@ -29,7 +37,7 @@ require_once('conexion.php');
 	});
 	$(window).scroll(function() {
 		if($(window).scrollTop() + window.innerHeight == $(document).height()) {
-			showRoom(4);
+			showRoom(1);
 		}
 	});
 </script>

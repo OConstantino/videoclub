@@ -1,13 +1,7 @@
 <?php
 require_once('../conexion.php');
-$action=$_POST["action"];
-if($action==0)
-$action1=7;
-else{
-	$action1=$action;
-	$action=7;
-
-}
+$action=$_POST['action'];
+$action1=$_POST['action1'];
 if($action>=0){
 	$query="select * from (select @rownum := @rownum+1 as c, p.* from peliculas p, (select @rownum := 0) r) j where c >= ".$action." and c < ".$action1."";
 	$show=mysqli_query($conexion,$query) or die ("Error");
@@ -21,6 +15,8 @@ if($action>=0){
 		echo "<td>".$row['director']."</td>";
 		echo "<td>".$row['actores']."</td>";
 		echo "<td>".$row['genero']."</td>";
+		if($row[''])
+		echo "<td id=\"".$row['id']."\" ><div class=\"alquilar\" onclick="\reservar(\">reservar</div></td>";
 		echo "</tr>";
 	}
 }
