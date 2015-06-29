@@ -1,5 +1,4 @@
 <?php
-//SESSIONES
 if (!isset($_SESSION)) {
  session_start();
 }

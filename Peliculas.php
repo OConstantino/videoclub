@@ -27,9 +27,15 @@ require_once('conexion.php');
 		</table>
 	</div>
 	<footer class="pie"></footer>
-	<?php if(!isset($_SESSION['iduser'])){
+	<?php if(!isset($_SESSION['nombreuser'])){
 		include('/inc/login and reg.php');
 	} ?>
+	<div class="cogebox" id="res"style="display:none">
+		<div id="loginflotante">
+			<h1>reserva exitosa</h1>
+		</div>
+		<div class="fondonegro"></div>
+	</div>
 </body>
 <script type="text/javascript">
 	$(document).ready(function(){

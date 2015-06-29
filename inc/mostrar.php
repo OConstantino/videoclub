@@ -7,6 +7,7 @@ if($action>=0){
 	$show=mysqli_query($conexion,$query) or die ("Error");
 	while($row=mysqli_fetch_array($show)){
 		echo "<tr>";
+		echo "<form onsubmit=\"return false\" id=\"reserva\" method=\"post\">";
 		if($row['imagen']!=NULL)
 			echo "<td><img class=\"imagenes\" src=\"".$url."images_uploaded/".$row['imagen']."\"></td>";
 		else
@@ -15,9 +16,11 @@ if($action>=0){
 		echo "<td>".$row['director']."</td>";
 		echo "<td>".$row['actores']."</td>";
 		echo "<td>".$row['genero']."</td>";
-		if($row[''])
-		echo "<td id=\"".$row['id']."\" ><div class=\"alquilar\" onclick="\reservar(\">reservar</div></td>";
+		if(isset($_SESSION['nombreuser']))
+		echo "<td><input type=\"submit\" name=\"boton\" onClick=\"reservar('".$row['id']."','".$_SESSION['nombreuser']."');\" value=\"reservar\"></td>";
+		echo "</form>";
 		echo "</tr>";
 	}
+	
 }
 ?>

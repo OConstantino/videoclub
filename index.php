@@ -17,7 +17,7 @@ require_once('conexion.php');
 	<?php include('/inc/menu.php'); ?>
 	<div class="cuerpo"></div>
 	<footer class="pie"></footer>
-	<?php if(!isset($_SESSION['iduser'])){
+	<?php if(!isset($_SESSION['nombreuser'])){
 		include('/inc/login and reg.php');
 	} ?>
 </body>

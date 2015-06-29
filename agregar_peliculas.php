@@ -32,7 +32,7 @@ header('Location:'.$url);
 		</form>
 	</div>
 	<footer class="pie"></footer>
-	<?php if(!isset($_SESSION['iduser'])){
+	<?php if(!isset($_SESSION['nombreuser'])){
 		include('/inc/login and reg.php');
 	} ?>
 </body>

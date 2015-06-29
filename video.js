@@ -1,13 +1,13 @@
-$(document).ready();
 var datai=0;
 var dataf=0;
 var urlweb='http://localhost/VideoClub/';
+
 function ventana(argument) {
 	if(argument)
 		$('#log').fadeIn(500);
 	else {
-		$('#log').fadeOut(500);
 		$('#error_login').slideUp(500);
+		$('#log').fadeOut(500);
 	}
 }
 function regis(argument) {
@@ -67,8 +67,25 @@ function showRoom(data){
 		url:urlweb+"/inc/mostrar.php",
 		data:{action:datai,action1:dataf},
 		success:function(d){
-			console.log(d);
 			$("#tabla").append(d);
+		}
+	});
+}
+
+function reservar(id,user){
+	$.ajax({
+		type:"POST",
+		url:urlweb+"/inc/reservar.php",
+		data:'id='+id+'&user='+user,
+		success:function(d){
+			if(d==1){
+				console.log(d);
+				$('#res').fadeIn(500);
+				setTimeout(function(){
+						$('#res').fadeOut(500);
+					},1000);
+
+			}
 		}
 	});
 }
