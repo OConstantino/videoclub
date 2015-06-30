@@ -79,7 +79,6 @@ function reservar(id,user){
 		data:'id='+id+'&user='+user,
 		success:function(d){
 			if(d==1){
-				console.log(d);
 				$('#res').fadeIn(500);
 				setTimeout(function(){
 						$('#res').fadeOut(500);
