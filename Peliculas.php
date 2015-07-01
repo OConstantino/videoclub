@@ -23,10 +23,14 @@ require_once('conexion.php');
 				<td>Director</td>
 				<td>Actores</td>
 				<td>Genero</td>
+				<?php if(isset($_SESSION['nombreuser'])&& $_SESSION['nombreuser']=='admin'){ ?>
+					<td>Cantidad</td>
+					<td>Stock</td>
+				<?php } ?>
 			</tr>
 		</table>
 	</div>
-	<footer class="pie"></footer>
+	<?php include('/inc/footer.php') ?>
 	<?php if(!isset($_SESSION['nombreuser'])){
 		include('/inc/login and reg.php');
 	} ?>

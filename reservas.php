@@ -15,10 +15,21 @@ require_once('conexion.php');
 <body>
 	<header class="encabezado"></header>
 	<?php include('/inc/menu.php'); ?>
-	<div class="cuerpo"></div>
+	<div class="cuerpo">
+		<table id="tabla" class="peliculas">
+                        <td>Id</td>
+                        <td>User</td>
+                        <td></td>
+                </table>
+	</div>
 	<?php include('/inc/footer.php') ?>
 	<?php if(!isset($_SESSION['nombreuser'])){
 		include('/inc/login and reg.php');
 	} ?>
 </body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		MostrarTabla();
+	});
+</script>
 </html>

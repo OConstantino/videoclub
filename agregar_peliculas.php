@@ -31,7 +31,7 @@ header('Location:'.$url);
 			</ul>
 		</form>
 	</div>
-	<footer class="pie"></footer>
+	<?php include('/inc/footer.php') ?>
 	<?php if(!isset($_SESSION['nombreuser'])){
 		include('/inc/login and reg.php');
 	} ?>

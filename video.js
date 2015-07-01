@@ -87,4 +87,24 @@ function reservar(id,user){
 			}
 		}
 	});
+}function MostrarTabla(){
+	$.ajax({
+		type:"POST",
+		url:urlweb+"/inc/mostrarr.php",
+		success:function(d){
+			$('#tabla').append(d);
+		}
+	});
+}
+function alquilar(id,user){
+	$.ajax({
+		type:"POST",
+		url:urlweb+"/inc/alquilar.php",
+		data:'id='+id+'&user='+user,
+		success:function(d){
+			if(d==1){
+				location.reload();
+			}
+			}
+	});
 }

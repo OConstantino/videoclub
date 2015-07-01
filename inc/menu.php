@@ -1,7 +1,7 @@
 <nav class="menu">
 	<a href="http://localhost/videoclub/"class="cursor"><li class="item_m">Inicio</li></a>
 	<a href="http://localhost/videoclub/Peliculas.php"class="cursor"><li class="item_m">Peliculas</li></a>
-	<li class="item_m">Contacto</li>
+	<a href="http://localhost/videoclub/contacto.php" class="cursor"><li class="item_m">Contacto</li></a> 
 	<?php if(!isset($_SESSION['nombreuser'])) { ?>
 	<a onClick="ventana(1);"class="cursor"><li class="item_l">Iniciar Sesion</li></a>
 	<a onClick="regis(1);" class="cursor"><li class="item_l">Registrarse</li></a>

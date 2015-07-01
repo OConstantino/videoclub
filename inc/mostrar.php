@@ -16,11 +16,15 @@ if($action>=0){
 		echo "<td>".$row['director']."</td>";
 		echo "<td>".$row['actores']."</td>";
 		echo "<td>".$row['genero']."</td>";
-		if(isset($_SESSION['nombreuser']))
+		if(isset($_SESSION['nombreuser']) && $_SESSION['nombreuser']=='admin'){
+			echo "<td>".$row['cantidad']."</td>";
+			echo "<td>".$row['stock']."</td>";
+		}
+		if(isset($_SESSION['nombreuser']) && mysqli_fetch_array(mysqli_query($conexion,"SELECT stock FROM peliculas WHERE id='".$row['id']."' AND stock>0")) )
 		echo "<td><input type=\"submit\" name=\"boton\" onClick=\"reservar('".$row['id']."','".$_SESSION['nombreuser']."');\" value=\"reservar\"></td>";
 		echo "</form>";
 		echo "</tr>";
 	}
-	
+
 }
 ?>
