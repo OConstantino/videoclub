@@ -9,11 +9,12 @@ VALUES('".$_POST['id']."',
 	'$fecha',
 	'$fechaf')";
 $DatosWeb=mysqli_query($conexion,$insert_Datos);
-$insert_Datos="UPDATE peliculas SET stock=stock-1 WHERE id='".$_POST['id']."'";
-$DatosWeb=mysqli_query($conexion,$insert_Datos);
 if($DatosWeb==false)
 	echo 0;
-else
+else{
+	$insert_Datos="UPDATE peliculas SET stock=stock-1 WHERE id='".$_POST['id']."'";
+	$DatosWeb=mysqli_query($conexion,$insert_Datos);
 	echo 1;
+}
 
 ?>

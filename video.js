@@ -108,3 +108,24 @@ function alquilar(id,user){
 			}
 	});
 }
+function MostrarTablaA(){
+	$.ajax({
+		type:"POST",
+		url:urlweb+"/inc/mostrarA.php",
+		success:function(d){
+			$('#tabla').append(d);
+		}
+	});
+}
+function devuelto(id,user){
+	$.ajax({
+		type:"POST",
+		url:urlweb+"/inc/devuelto.php",
+		data:'id='+id+'&user='+user,
+		success:function(d){
+			if(d==1){
+				location.reload();
+			}
+			}
+	});
+}
