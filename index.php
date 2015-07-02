@@ -13,9 +13,13 @@ require_once('conexion.php');
 </head>
 
 <body>
-	<header class="encabezado"></header>
+	<header class="encabezado">
+	<center class="titulo"> Videoclub </center>
+	</header>
 	<?php include('/inc/menu.php'); ?>
-	<div class="cuerpo"></div>
+	<div class="cuerpo">
+		<h2 class="bienvenido"> Bienvenido! </h2>
+	</div>
 	<?php include('/inc/footer.php') ?>
 	<?php if(!isset($_SESSION['nombreuser'])){
 		include('/inc/login and reg.php');

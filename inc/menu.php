@@ -1,4 +1,14 @@
 <nav class="menu">
+	<script type="text/javascript">
+		var num=100;
+		$(window).bind('scroll', function () {
+			if ($(window).scrollTop() > num){
+				$('.menu').addClass('fixed');
+			} else {
+				$('.menu').removeClass('fixed');
+			}
+		});
+	</script>
 	<a href="http://localhost/videoclub/"class="cursor"><li class="item_m">Inicio</li></a>
 	<a href="http://localhost/videoclub/Peliculas.php"class="cursor"><li class="item_m">Peliculas</li></a>
 	<a href="http://localhost/videoclub/contacto.php" class="cursor"><li class="item_m">Contacto</li></a>
@@ -11,20 +21,20 @@
 	<?php }
 	if(isset($_SESSION['nombreuser']) && $_SESSION['nombreuser']=='admin'){ ?>
 			<li class="item_m cursor" id="click">+
-				<ul id="solapa" >
+				<ul id="solapa" style="display:none">
 					<li><a href="http://localhost/VideoClub/agregar_peliculas.php">Agregar peliculas</a></li>
 					<li><a href="http://localhost/VideoClub/reservas.php">Confirmar Reservas</a></li>
 					<li><a href="http://localhost/VideoClub/alquiladas.php">peliculas alquiladas</a></li>
 				</ul>
 			</li>
-			<script type="text/javascript">
+			<script>
 			$( "#click" ).click(function() {
 				$( "#solapa" ).slideToggle();
 			});
 			</script>
 			<style>
 			#solapa{
-				display:none;
+				display: none;
 				padding:10px 0;
 				list-style: none;
 				text-decoration:none;

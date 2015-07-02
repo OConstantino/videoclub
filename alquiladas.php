@@ -29,7 +29,7 @@ require_once('conexion.php');
 </body>
 <script type="text/javascript">
 	$(document).ready(function(){
-		MostrarTablaA();
+		MostrarTabla("/inc/mostrarA.php");
 	});
 </script>
 </html>

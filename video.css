@@ -2,37 +2,57 @@ body{
 	z-index: 0;
 	margin: 0px;
 	font-size: 13px;
-	background: #a09ba4;
+	background-image: url(Fondo-01.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
 	font-family: 'Lato',monospace;
 }
+
 .encabezado{
-	margin: 5px auto;
-	max-width: 965px;
+
+	width: 100% auto;
 	height: 100px;
-	background: #FFF;
-	border: 1px solid #ddb;
+	background-image: url(Fondotitulo.jpg);
+	background-size: cover;
+
+}
+
+.titulo{
+	font-family: 'JasmineUPC';
+	font-size: 90px;
+	padding-top: 5px;
+	font-weight: bold;
 
 }
 .menu{
-	margin: 5px auto;
-	max-width: 965px;
+	width: 100%;
 	height: 40px;
-	background: #FFF;
+	background-image: url(Fondomenu.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
 	border: 1px solid #ddb;
 	list-style: none;
 	display: relative;
+	position: absolute;
+}
+
+.fixed{
+	margin: 0px;
+	position: fixed;
+	top:0;
+
 }
 .item_m{
 	float:left;
 	font-size: 16px;
-	padding: 10px 5px;
+	padding: 10px 20px;
 }
 .cursor{
 	cursor: pointer;
 }
 .item_l{
 	font-size: 16px;
-	padding: 10px 5px;
+	padding: 10px 20px;
 	float:right;
 }
 a{
@@ -42,21 +62,33 @@ a:hover{
 	color:#ccc;
 }
 .cuerpo{
-	margin: 5px auto;
-	max-width: 965px;
-	min-height: 40px;
-	background: #FFF;
-	border: 1px solid #ddb;
-
+	margin: 0 auto;
+	margin-top: 45px;
+	margin-bottom: 2px;
+	max-width: 1000px;
+	min-height: 650px;
+	background-image: url(Fondogris.jpg);
+	background-size: cover;
+	opacity: 0.5;
 }
+
+.bienvenido{
+	font-family: sans-serif;
+	font-size: 50px;
+	color: #FFF;
+	padding: 30px;
+}
+
+
 .pie{
-	margin: 5px auto;
-	max-width: 965px;
-	height: 60px;
+	width: 100%;
+	height: 20px;
+	bottom: 0;
 	background: #FFF;
 	border: 1px solid #ddb;
 
 }
+
 #loginflotante{
 	z-index: 999;
 	border: 5px solid #fff;

@@ -87,10 +87,10 @@ function reservar(id,user){
 			}
 		}
 	});
-}function MostrarTabla(){
+}function MostrarTabla(data){
 	$.ajax({
 		type:"POST",
-		url:urlweb+"/inc/mostrarr.php",
+		url:urlweb+data,
 		success:function(d){
 			$('#tabla').append(d);
 		}
@@ -106,15 +106,6 @@ function alquilar(id,user){
 				location.reload();
 			}
 			}
-	});
-}
-function MostrarTablaA(){
-	$.ajax({
-		type:"POST",
-		url:urlweb+"/inc/mostrarA.php",
-		success:function(d){
-			$('#tabla').append(d);
-		}
 	});
 }
 function devuelto(id,user){
