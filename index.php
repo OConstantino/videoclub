@@ -32,6 +32,22 @@ require_once('conexion.php');
 				<img src="http://i.kinja-img.com/gawker-media/image/upload/etwiuigvocmvjrakayvx.jpg">
 			</div>
 		</div>
+		<script>
+		$(function() {
+
+				$("#slideshow > div:gt(0)").hide();
+
+				setInterval(function() {
+				  $('#slideshow > div:first')
+				    .fadeOut(1000)
+				    .next()
+				    .fadeIn(1000)
+				    .end()
+				    .appendTo('#slideshow');
+				},  3000);
+
+			});
+		</script>
 	</div>
 	<?php include('/inc/footer.php') ?>
 	<?php if(!isset($_SESSION['nombreuser'])){

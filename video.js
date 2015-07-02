@@ -1,7 +1,6 @@
 var datai=0;
 var dataf=0;
 var urlweb='http://localhost/VideoClub/';
-
 function ventana(argument) {
 	if(argument)
 		$('#log').fadeIn(500);

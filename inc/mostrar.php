@@ -41,7 +41,7 @@ if(isset($_POST['action'])){
 		mysqli_fetch_array(mysqli_query($conexion,"SELECT stock FROM peliculas WHERE id='".$row['id']."' AND stock>0"))
 		&& !mysqli_fetch_array(mysqli_query($conexion,"SELECT * FROM reservas WHERE id='".$row['id']."' AND user='".$_SESSION['nombreuser']."'"))
 		&& !mysqli_fetch_array(mysqli_query($conexion,"SELECT * FROM alquilado WHERE id='".$row['id']."' AND user='".$_SESSION['nombreuser']."' AND deudas IS NULL ")))
-		echo "<td><input type=\"submit\" name=\"boton\" onClick=\"reservar('".$row['id']."','".$_SESSION['nombreuser']."');this.style.display='none'\" value=\"reservar\"></td>";
+		echo "<td><input type=\"submit\" id=\"boton\" onClick=\"reservar('".$row['id']."','".$_SESSION['nombreuser']."');this.style.display='none'\" value=\"Reservar\" id=\"regisbn\"></td>";
 		echo "</form>";
 		echo "</tr>";
 	}

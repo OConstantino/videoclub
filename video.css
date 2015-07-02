@@ -9,6 +9,9 @@ body{
 
 	width: 100% auto;
 	height: 100px;
+	background-image: url(images/Fondotitulo.jpg);
+	background-repeat: repeat;
+	background-size: cover;
 
 }
 
@@ -22,10 +25,10 @@ body{
 .menu{
 	width: 100%;
 	height: 40px;
-	border: 1px solid #ddb;
 	list-style: none;
 	display: relative;
 	position: absolute;
+	background: linear-gradient(#a0a0a0,#ffffff);
 }
 
 .fixed{
@@ -55,24 +58,38 @@ a:hover{
 }
 .cuerpo{
 	margin: 0 auto;
-	margin-top: 45px;
+	margin-top: 50px;
 	margin-bottom: 2px;
-	max-width: 1000px;
+	max-width: 1160px;
 	min-height: 650px;
+	background-color: #cacaca;
+	border: 1px solid #a0a0a0;
 }
 
 .pie{
 	width: 100%;
-	height: 20px;
+	min-height: 20px;
+	margin-top: 5px;
+	padding-bottom: 6px;
 	bottom: 0;
-	background: #FFF;
-	border: 1px solid #ddb;
-
+	background: linear-gradient(#ffffff,#a0a0a0);
+	opacity: 0.8;
 }
 
+#image{
+	float:left;
+	margin-left: 10px;
+}
+
+.fade{
+	 color: #7b7c7c;
+}
+.social{
+	float: right;
+}
 #loginflotante{
-	z-index: 999;
-	border: 5px solid #fff;
+	z-index: 5;
+	border-radius: 2px;
 	margin-top: -213px;
 	margin-left: -153px;
 	top: 50%;
@@ -81,11 +98,33 @@ a:hover{
 	position: fixed;
 	width: 265px;
 	background-color: #ccc;
-	border-radius: 8px;
 	padding-bottom: 15px;
 	font-size: 14px;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+}
+#loginflotante input[type=text], input[type=password] {
+  height: 44px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  padding: 0 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+#loginflotante input[type=text]:hover, input[type=password]:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
 }
 #loginflotante li{
+	padding-bottom: 5px;
 	list-style: none;
 }
 .fondonegro{
@@ -95,7 +134,7 @@ a:hover{
 	top: 0;
 	left: 0;
 	background: #666;
-	z-index: 99;
+	z-index: 4;
 	opacity: 0.5;
 }
 .peliculas{
@@ -104,12 +143,14 @@ a:hover{
 }
 #tabla tr{
 	height: 80px;
+	text-align: center;
 }
 #tabla td{
-	height: 80px;
+	height: 30px;
 	width: 120px;
 	position:relative;
 }
+
 .imagenes{
 	height: 80px;
 	width: 120px;
@@ -122,7 +163,7 @@ a:hover{
 	width: 120px;
 	height: 30px;
 	bottom: 0;
-	left: 1;
+	left: 0;
 }
 .alquilar{
 	font-size: 20px;
@@ -133,9 +174,84 @@ a:hover{
 .filtro form{
 	display: inline-block;
 }
-#slideshow{
-	height: 240px;
-	width: 240px;
+
+#bn{
+	padding: 9px 15px 11px;
+	font-size: 13px;
+	background-color: #fff;
+	font-weight: bold;
+	text-shadow: 1px 1px rgba(0,0,0,0.2) ;
+	color: #000000;
+	border-radius: 30px;
+	border: 1px solid #fff;
+	cursor: pointer;
+	margin-top: 9px;
+
+}
+
+#bn:hover{
+	color: #5ea398;
+}
+
+.mapa{
+
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+
+.descripcion {
+
+	padding-left: 15px;
+	padding-top: 20px;
+	padding-right: 15px;
+	font-family: 'Lato';
+}
+
+.acercate{
+	font-size: 20px;
+	font-weight: bold;
+	padding-left: 10px;
+}
+
+.direccion{
+	font-size: 15px;
+	padding-left: 10px;
+}
+
+.filtro{
+	border: 1px solid white;
+	margin-top: 7px;
+	background-color: #e8e4e4;
+	padding-right: 10px; padding-bottom: 10px; padding-left: 10px; padding-top: 10px;
+}
+
+#regisbn{
+
+	padding: 5px 11px 7px;
+	font-size: 11px;
+	background-color: #5ea398;
+	font-weight: italic;
+	color: #000000;
+	border-radius: 4px;
+	border: 1px solid #5ea398;
+	cursor: pointer;
+	margin-top: 9px;
+
+}
+
+#regisbn:hover{
+	background-color: #64aca0;
+}
+.bienvenido{
+	margin-top: 100px;
+	padding-top: 100px;
+	padding-left: 50px;
+	margin: auto;
+	position: absolute;
+	float:left;
+	width: 200px;
+	font-size: 20px;
 }
 .ele{
 
@@ -148,18 +264,47 @@ a:hover{
 	left: 0;
 	position: absolute;
 }
-
 .ele img{
 	margin-right: 50%;
 	width: 700px;
 	height: 400px;
 }
-.bienvenido{
-	margin-top: 100px;
-	padding-top: 100px;
-	margin: auto;
-	position: absolute;
-	float:left;
-	width: 200px;
+#agregar{
+	padding: 5px;
+}
+#agregar input{
 	font-size: 20px;
+	height: 44px;
+	display: block;
+	margin-bottom: 5px;
+
+}
+#agregar textarea{
+	font-size: 20px;
+	height: 44px;
+	display: block;
+	margin-bottom: 5p;
+}
+#boton {
+	-moz-box-shadow: 0px 0px 0px 0px #3dc21b;
+	-webkit-box-shadow: 0px 0px 0px 0px #3dc21b;
+	box-shadow: 0px 0px 0px 0px #3dc21b;
+	background-color:#696b69;
+	border:1px solid black;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:0px 9px;
+	text-decoration:none;
+	text-shadow:-1px 1px 2px #2d6125;
+}
+#boton:hover {
+	background-color:#a19ea1;
+}
+#boton:active {
+	position:relative;
+	top:1px;
 }

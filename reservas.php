@@ -1,5 +1,7 @@
 <?php
 require_once('conexion.php');
+if(!isset($_SESSION['nombreuser'])||$_SESSION['nombreuser']!='admin')
+header('Location:'.$url);
 ?>
 <!doctype html>
 <html>

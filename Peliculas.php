@@ -14,34 +14,36 @@ require_once('conexion.php');
 </head>
 
 <body>
-	<header class="encabezado"></header>
+	<header class="encabezado">
+		<center class="titulo">Peliculas</center>
+	</header>
 	<?php include('/inc/menu.php'); ?>
 	<div class="cuerpo">
 		<div class="filtro">
+			<h4 class="direccion">Filtrar</h4>
 			<form onsubmit="return false" method="post">
 			        <select name="genero">
-			                <option value="ficcion">ficcion</option>
-			                <option value="romance">romance</option>
-			                <option value="comedia">comedia</option>
-			                <option value="accion">accion</option>
+			                <option value="ficcion">Ficcion</option>
+			                <option value="romance">Romance</option>
+			                <option value="comedia">Comedia</option>
+			                <option value="accion">Accion</option>
 			        </select>
-			        <input type="submit" value="filtrar" onclick="showRoomG(genero.value);">
+			        <input type="submit" id="boton" value="Filtrar" onclick="showRoomG(genero.value);">
 			</form>
 			<form onsubmit="return false" method="post">
-			        <input type="text" name="director" placeholder="director">
-			        <input type="submit" value="buscar" onclick="showRoomD(director.value);">
+			        <input type="search" name="director" placeholder="Director">
+			        <input type="submit" id="boton" value="Buscar" onclick="showRoomD(director.value);">
 			</form>
 			<form onsubmit="return false" method="post">
-			        <input type="text" name="actor" placeholder="actor">
-			        <input type="submit" value="buscar" onclick="showRoomA(actor.value);">
+			        <input type="search" name="actor" placeholder="Actor">
+			        <input type="submit" id="boton" value="Buscar" onclick="showRoomA(actor.value);">
 			</form>
 			<form onsubmit="return false" method="post">
-			        <input type="text" name="titulo"placeholder="titulo">
-			        <input type="submit" value="buscar" onclick="showRoomT(titulo.value);">
+			        <input type="search" name="titulo"placeholder="Titulo">
+			        <input type="submit" id="boton" value="Buscar" onclick="showRoomT(titulo.value);">
 			</form>
 		</div>
 		<table id="tabla" class="peliculas">
-			<tr>
 				<thead>
 					<td></td>
 					<td>Titulo</td>
@@ -56,7 +58,6 @@ require_once('conexion.php');
 				<tbody id="tbody">
 
 				</tbody>
-			</tr>
 		</table>
 	</div>
 	<?php include('/inc/footer.php') ?>
@@ -65,7 +66,8 @@ require_once('conexion.php');
 	} ?>
 	<div class="cogebox" id="res"style="display:none">
 		<div id="loginflotante">
-			<h1>reserva exitosa</h1>
+			<h1>Reserva exitosa</h1>
+			<h2>Tiene 4 días para retirar la película.</h2>
 		</div>
 		<div class="fondonegro"></div>
 	</div>

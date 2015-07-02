@@ -13,10 +13,8 @@ while($row=mysqli_fetch_array($show)){
         echo "<form onsubmit=\"return false\" id=\"reserva\" method=\"post\">";
         echo "<td>".$row['id']."</td>";
         echo "<td>".$row['user']."</td>";
-        echo "<td><input type=\"submit\" name=\"boton\" onClick=\"alquilar('".$row['id']."','".$row['user']."');\" value=\"confirmar\"></td>";
+        echo "<td><input type=\"submit\" id=\"boton\" onClick=\"alquilar('".$row['id']."','".$row['user']."');\" value=\"Confirmar\"></td>";
         echo "</form>";
         echo "</tr>";
 }
-
-
  ?>
