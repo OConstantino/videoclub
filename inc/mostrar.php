@@ -10,13 +10,13 @@ if($action>=0){
 		echo "<form onsubmit=\"return false\" id=\"reserva\" method=\"post\">";
 		if($row['imagen']!=NULL){
                         if(mysqli_fetch_array(mysqli_query($conexion,"SELECT * FROM alquilado WHERE id='".$row['id']."' AND user='".$_SESSION['nombreuser']."'")))
-                                echo "<td><div class=\"visto\"></div><img class=\"imagenes\" src=\"".$url."images_uploaded/".$row['imagen']."\"></td>";
+                                echo "<td><div class=\"visto\">VISTO</div><img class=\"imagenes\" src=\"".$url."images_uploaded/".$row['imagen']."\"></td>";
                         else
                                 echo "<td><img class=\"imagenes \" src=\"".$url."images_uploaded/".$row['imagen']."\"></td>";
 		}
 		else{
                         if(mysqli_fetch_array(mysqli_query($conexion,"SELECT * FROM alquilado WHERE id='".$row['id']."' AND user='".$_SESSION['nombreuser']."'")))
-                                echo "<td><div class=\"visto\"></div><img class=\"imagenes \" src=\"".$url."images/no-image.png\"></td>";
+                                echo "<td><div class=\"visto\">VISTO</div><img class=\"imagenes \" src=\"".$url."images/no-image.png\"></td>";
                         else
                                 echo "<td><img class=\"imagenes\" src=\"".$url."images/no-image.png\"></td>";
 		}
