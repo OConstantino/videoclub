@@ -133,3 +133,33 @@ a:hover{
 .filtro form{
 	display: inline-block;
 }
+#slideshow{
+	height: 240px;
+	width: 240px;
+}
+.ele{
+
+	margin: auto;
+	width: 240px;
+	height: 240px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	position: absolute;
+}
+
+.ele img{
+	margin-right: 50%;
+	width: 700px;
+	height: 400px;
+}
+.bienvenido{
+	margin-top: 100px;
+	padding-top: 100px;
+	margin: auto;
+	position: absolute;
+	float:left;
+	width: 200px;
+	font-size: 20px;
+}

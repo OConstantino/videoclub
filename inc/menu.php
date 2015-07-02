@@ -31,20 +31,32 @@
 			$( "#click" ).click(function() {
 				$( "#solapa" ).slideToggle();
 			});
+				$(function() {
+
+			$("#slideshow > div:gt(0)").hide();
+				setInterval(function() {
+				  $('#slideshow > div:first')
+				    .fadeOut(1000)
+				    .next()
+				    .fadeIn(1000)
+				    .end()
+				    .appendTo('#slideshow');
+			},  5000);
+
+			});
 			</script>
 			<style>
 			#solapa{
-				display: none;
-				padding:10px 0;
 				list-style: none;
 				text-decoration:none;
 				margin:2px;
-				padding:2px;
-				background-color: #ccc;
+				padding: 12px;
+				background-color: #F2F2F2;
 				position: absolute;
 				z-index: 1;
 			}
 			#solapa li{
+				padding-bottom: 5px;
 				display: block;
 			}
 			#solapa li a{

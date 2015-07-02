@@ -19,6 +19,19 @@ require_once('conexion.php');
 	</header>
 	<?php include('/inc/menu.php'); ?>
 	<div class="cuerpo">
+		<div class="bienvenido">
+			Bienvenido al nuevo videoclub de Rosario.
+			Ofrecemos todo tipo de peliculas de muy buena calidad de imagen y sonido.
+			Solo tienes que registrarte para poder reservar tu pelicula y luego retirarla en nuestro local.
+		</div>
+		<div id="slideshow">
+			<div class="ele">
+				<img src="http://edge.alluremedia.com.au/m/k/2015/06/arkham.jpg">
+			</div>
+			<div class="ele">
+				<img src="http://i.kinja-img.com/gawker-media/image/upload/etwiuigvocmvjrakayvx.jpg">
+			</div>
+		</div>
 	</div>
 	<?php include('/inc/footer.php') ?>
 	<?php if(!isset($_SESSION['nombreuser'])){
