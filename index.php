@@ -7,6 +7,7 @@ require_once('conexion.php');
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <link type="text/css" href="video.css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 <script src="video.js"></script>
 <head>
 	<title>VideoClub</title>
@@ -18,7 +19,6 @@ require_once('conexion.php');
 	</header>
 	<?php include('/inc/menu.php'); ?>
 	<div class="cuerpo">
-		<h2 class="bienvenido"> Bienvenido! </h2>
 	</div>
 	<?php include('/inc/footer.php') ?>
 	<?php if(!isset($_SESSION['nombreuser'])){

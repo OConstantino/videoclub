@@ -8,6 +8,7 @@ require_once('conexion.php');
 <link type="text/css" href="video.css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <script src="video.js"></script>
+<script src="inc/buscar.js"></script>
 <head>
 	<title>VideoClub</title>
 </head>
@@ -16,17 +17,45 @@ require_once('conexion.php');
 	<header class="encabezado"></header>
 	<?php include('/inc/menu.php'); ?>
 	<div class="cuerpo">
+		<div class="filtro">
+			<form onsubmit="return false" method="post">
+			        <select name="genero">
+			                <option value="ficcion">ficcion</option>
+			                <option value="romance">romance</option>
+			                <option value="comedia">comedia</option>
+			                <option value="accion">accion</option>
+			        </select>
+			        <input type="submit" value="filtrar" onclick="showRoomG(genero.value);">
+			</form>
+			<form onsubmit="return false" method="post">
+			        <input type="text" name="director" placeholder="director">
+			        <input type="submit" value="buscar" onclick="showRoomD(director.value);">
+			</form>
+			<form onsubmit="return false" method="post">
+			        <input type="text" name="actor" placeholder="actor">
+			        <input type="submit" value="buscar" onclick="showRoomA(actor.value);">
+			</form>
+			<form onsubmit="return false" method="post">
+			        <input type="text" name="titulo"placeholder="titulo">
+			        <input type="submit" value="buscar" onclick="showRoomT(titulo.value);">
+			</form>
+		</div>
 		<table id="tabla" class="peliculas">
 			<tr>
-				<td></td>
-				<td>Titulo</td>
-				<td>Director</td>
-				<td>Actores</td>
-				<td>Genero</td>
-				<?php if(isset($_SESSION['nombreuser'])&& $_SESSION['nombreuser']=='admin'){ ?>
-					<td>Cantidad</td>
-					<td>Stock</td>
-				<?php } ?>
+				<thead>
+					<td></td>
+					<td>Titulo</td>
+					<td>Director</td>
+					<td>Actores</td>
+					<td>Genero</td>
+					<?php if(isset($_SESSION['nombreuser'])&& $_SESSION['nombreuser']=='admin'){ ?>
+						<td>Cantidad</td>
+						<td>Stock</td>
+					<?php } ?>
+				</thead>
+				<tbody id="tbody">
+
+				</tbody>
 			</tr>
 		</table>
 	</div>
