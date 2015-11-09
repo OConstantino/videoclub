@@ -66,6 +66,7 @@ function showRoom(data){
 		url:urlweb+"/inc/mostrar.php",
 		data:{action:datai,action1:dataf},
 		success:function(d){
+			console.log(d);
 			$("#tbody").append(d);
 		}
 	});
